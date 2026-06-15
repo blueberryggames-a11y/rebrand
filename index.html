@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AniBlossom — Watch anime online free. Subtitled and dubbed. HD quality.">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>AniBlossom — Watch Anime Online</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AniBlossom — Watch Anime Online">
+  <meta property="og:description" content="Stream anime free in HD. Sub & dub available.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff6e96'/><text x='16' y='22' text-anchor='middle' font-size='18'>🌸</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────── -->
+<nav class="navbar">
+  <button class="nav-menu-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <a href="/" class="navbar-logo font-display">
+    <div class="logo-icon">🌸</div>
+    Ani<span>Blossom</span>
+  </a>
+
+  <div class="nav-search">
+    <span class="search-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+    </span>
+    <input id="searchInput" type="search" placeholder="Search anime…" autocomplete="off">
+    <div class="search-kbd">
+      <span class="kbd">⌘</span><span class="kbd">K</span>
+    </div>
+    <div class="search-dropdown" id="searchDropdown"></div>
+  </div>
+
+  <div class="nav-actions">
+    <button class="nav-btn" id="randomBtn" title="Random anime" aria-label="Random anime">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="16 3 21 3 21 8"/>
+        <line x1="4" y1="20" x2="21" y2="3"/>
+        <polyline points="21 16 21 21 16 21"/>
+        <line x1="15" y1="15" x2="21" y2="21"/>
+      </svg>
+    </button>
+    <button class="nav-btn" title="Watchlist" aria-label="Watchlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+      </svg>
+    </button>
+    <div class="nav-user-avatar" title="Account">M</div>
+  </div>
+</nav>
+
+<!-- ── Bookmark Banner ────────────────────────────────────── -->
+<div class="site-banner">
+  <span class="site-banner-icon">🔖</span>
+  Bookmark <a href="/">aniblossom.com</a> so you never lose us.
+  <button class="site-banner-close" aria-label="Close">×</button>
+</div>
+
+<!-- ── Hero Slider ────────────────────────────────────────── -->
+<section class="hero">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide active">
+    <div class="hero-bg" style="background-image: url('https://cdn.myanimelist.net/images/anime/1314/122795l.jpg')"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        <span class="hero-meta-item">📺 TV</span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          16 Episodes
+        </span>
+        <span class="hero-meta-item">⭐ 78</span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24 mins
+        </span>
+      </div>
+      <h1 class="hero-title font-display">Classroom of the Elite<br>4th Season</h1>
+      <div class="hero-genres">
+        <span class="hero-genre-tag">Drama</span>
+        <span class="hero-genre-tag">Psychological</span>
+        <span class="hero-genre-tag">Lerche</span>
+      </div>
+      <p class="hero-desc">
+        The fourth season of Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e. As Ayanokouji and his classmates begin their second year at the Advanced Nurturing High School, they're greeted by a fresh gauntlet of exams and a fresh batch of rather unique first-year students.
+      </p>
+      <div class="hero-actions">
+        <a href="/watch/54233" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Now
+        </a>
+        <a href="/anime/54233" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide">
+    <div class="hero-bg" style="background-image: url('https://cdn.myanimelist.net/images/anime/1142/126765l.jpg')"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        <span class="hero-meta-item">📺 TV</span>
+        <span class="hero-meta-item">📅 10 Episodes</span>
+        <span class="hero-meta-item">⭐ 88</span>
+        <span class="hero-meta-item">⏱ 24 mins</span>
+      </div>
+      <h1 class="hero-title font-display">Frieren: Beyond<br>Journey's End Season 2</h1>
+      <div class="hero-genres">
+        <span class="hero-genre-tag">Adventure</span>
+        <span class="hero-genre-tag">Drama</span>
+        <span class="hero-genre-tag">Fantasy</span>
+      </div>
+      <p class="hero-desc">
+        The continuation of Frieren's journey across a changed world. As time passes for everyone around her, the elven mage learns what it means to truly connect with those who live fleeting lives.
+      </p>
+      <div class="hero-actions">
+        <a href="/watch/56839" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Now
+        </a>
+        <a href="/anime/56839" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide">
+    <div class="hero-bg" style="background-image: url('https://cdn.myanimelist.net/images/anime/1015/138006l.jpg')"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        <span class="hero-meta-item">📺 TV</span>
+        <span class="hero-meta-item">📅 10 Episodes</span>
+        <span class="hero-meta-item">⭐ 82</span>
+        <span class="hero-meta-item">⏱ 24 mins</span>
+      </div>
+      <h1 class="hero-title font-display">That Time I Got<br>Reincarnated as a Slime S4</h1>
+      <div class="hero-genres">
+        <span class="hero-genre-tag">Action</span>
+        <span class="hero-genre-tag">Adventure</span>
+        <span class="hero-genre-tag">Fantasy</span>
+      </div>
+      <p class="hero-desc">
+        Demon Lord Rimuru's dream of creating an alliance between humans and monsters takes a step closer to being realized. A new Hero draws near as Tempest continues to prosper.
+      </p>
+      <div class="hero-actions">
+        <a href="/watch/182205" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Now
+        </a>
+        <a href="/anime/182205" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider controls -->
+  <div class="hero-countdown">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    EP 15 · 2D 10H
+  </div>
+  <div class="hero-controls">
+    <button class="hero-nav-btn" data-hero-prev aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <span class="hero-counter">1 / 3</span>
+    <button class="hero-nav-btn" data-hero-next aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ── Genre Bar ───────────────────────────────────────────── -->
+<div class="genre-bar">
+  <button class="genre-scroll-btn" data-dir="left" aria-label="Scroll left">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="genre-bar-inner">
+    <button class="genre-pill active">All</button>
+    <a href="/genre/comedy" class="genre-pill">Comedy</a>
+    <a href="/genre/drama" class="genre-pill">Drama</a>
+    <a href="/genre/ecchi" class="genre-pill">Ecchi</a>
+    <a href="/genre/fantasy" class="genre-pill">Fantasy</a>
+    <a href="/genre/horror" class="genre-pill">Horror</a>
+    <a href="/genre/mahou-shoujo" class="genre-pill">Mahou Shoujo</a>
+    <a href="/genre/mecha" class="genre-pill">Mecha</a>
+    <a href="/genre/music" class="genre-pill">Music</a>
+    <a href="/genre/mystery" class="genre-pill">Mystery</a>
+    <a href="/genre/psychological" class="genre-pill">Psychological</a>
+    <a href="/genre/romance" class="genre-pill">Romance</a>
+    <a href="/genre/sci-fi" class="genre-pill">Sci-Fi</a>
+    <a href="/genre/slice-of-life" class="genre-pill">Slice of Life</a>
+    <a href="/genre/sports" class="genre-pill">Sports</a>
+    <a href="/genre/supernatural" class="genre-pill">Supernatural</a>
+    <a href="/genre/thriller" class="genre-pill">Thriller</a>
+  </div>
+  <button class="genre-scroll-btn" data-dir="right" aria-label="Scroll right">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<!-- ── Main Grid ───────────────────────────────────────────── -->
+<div class="page-wrapper">
+  <main class="main-col">
+
+    <!-- Watch History -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-title-icon">📺</span>
+          Watch History
+        </h2>
+        <a href="/history" class="section-link">Your Watchlist</a>
+      </div>
+      <div class="history-grid">
+
+        <div class="history-card">
+          <div class="history-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1240/142503l.jpg" alt="The Eminence in Shadow" loading="lazy">
+            <div class="history-play">
+              <div class="history-play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="history-progress"><div class="history-progress-bar" style="width:78%"></div></div>
+            <span class="history-ep-badge">EP 5</span>
+            <span class="history-time-badge">18:04 / 23:41</span>
+          </div>
+          <button class="history-remove" aria-label="Remove">×</button>
+          <div class="history-body">
+            <div class="history-title">The Eminence in Shadow</div>
+            <div class="history-subtitle">Season 2 · Episode 5</div>
+          </div>
+        </div>
+
+        <a href="/watch/182205" class="history-card">
+          <div class="history-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="That Time I Got Reincarnated as a Slime Season 4" loading="lazy">
+            <div class="history-play">
+              <div class="history-play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="history-progress"><div class="history-progress-bar" style="width:9%"></div></div>
+            <span class="history-ep-badge">EP 1</span>
+            <span class="history-time-badge">02:13 / 23:08</span>
+          </div>
+          <button class="history-remove" aria-label="Remove">×</button>
+          <div class="history-body">
+            <div class="history-title">That Time I Got Reincarnated as a Slime Season 4</div>
+            <div class="history-subtitle">Episode 1</div>
+          </div>
+        </a>
+
+        <div class="history-card">
+          <div class="history-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1258/126038l.jpg" alt="Solo Leveling" loading="lazy">
+            <div class="history-play">
+              <div class="history-play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="history-progress"><div class="history-progress-bar" style="width:9%"></div></div>
+            <span class="history-ep-badge">EP 1</span>
+            <span class="history-time-badge">02:13 / 23:08</span>
+          </div>
+          <button class="history-remove" aria-label="Remove">×</button>
+          <div class="history-body">
+            <div class="history-title">Solo Leveling</div>
+            <div class="history-subtitle">Season 2 · Episode 1</div>
+          </div>
+        </div>
+
+        <div class="history-card">
+          <div class="history-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1087/141842l.jpg" alt="The Classroom of the Black Cat and a Witch" loading="lazy">
+            <div class="history-play">
+              <div class="history-play-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="history-progress"><div class="history-progress-bar" style="width:4%"></div></div>
+            <span class="history-ep-badge">EP 5</span>
+            <span class="history-time-badge">00:47 / 23:40</span>
+          </div>
+          <button class="history-remove" aria-label="Remove">×</button>
+          <div class="history-body">
+            <div class="history-title">The Classroom of the Black Cat and a Witch</div>
+            <div class="history-subtitle">Episode 5</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tabs: Newest / Popular / Top Rated -->
+    <section class="section" style="padding-bottom:0">
+      <div class="tabs" style="padding:0">
+        <div style="display:flex;align-items:center;gap:0;flex:1">
+          <button class="tab-btn active" data-tab="newest">Newest</button>
+          <button class="tab-btn" data-tab="popular">Popular</button>
+          <button class="tab-btn" data-tab="top-rated">Top Rated</button>
+        </div>
+        <div class="pagination">
+          <button class="page-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:16px;padding-bottom:24px">
+      <div class="card-grid">
+
+        <a href="/watch/anime-1" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1520/141914l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing" style="background:var(--dot-airing);box-shadow:0 0 6px var(--dot-airing)"></span>
+            <div class="card-overlay">
+              <div class="card-play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Ingoku Danchi: Deviant…</div>
+            <div class="card-meta">
+              <span>TV_SHORT</span><span>·</span><span>2026</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-2" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1855/141497l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Do You Like Big Girls?</div>
+            <div class="card-meta"><span>TV_SHORT</span><span>·</span><span>2026</span></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-3" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1855/140887l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">GHOST CONCERT: missing…</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>49</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-4" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1087/141842l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">The Classroom of the Black Cat and a Witch</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>63</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/49536" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1337/99013l.jpg" alt="ONE PIECE" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">ONE PIECE</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>1999</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>87</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-6" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1855/141250l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Magical Sisters Lulutt…</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>63</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-7" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1291/139894l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-finished"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">The Food Diary of Miss Maid</div>
+            <div class="card-meta"><span>ONA</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>66</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-8" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1900/117467l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-finished"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">NIPPON SANGOKU: Th…</div>
+            <div class="card-meta"><span>ONA</span><span>·</span><span>2026</span></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-9" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1834/138519l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-finished"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Sazae-san</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>1969</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>55</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-10" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1355/141671l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Holo no Graffiti</div>
+            <div class="card-meta"><span>ONA</span><span>·</span><span>2019</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>78</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-11" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1225/139813l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Ace of the Diamond act II</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>77</div></div>
+          </div>
+        </a>
+
+        <a href="/watch/anime-12" class="anime-card">
+          <div class="card-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1765/138530l.jpg" alt="" loading="lazy">
+            <span class="card-status-dot dot dot-airing"></span>
+            <div class="card-overlay"><div class="card-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Mission: Yozakura Fa…</div>
+            <div class="card-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><div class="card-rating"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>75</div></div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Just Finished + Top Movies -->
+    <div class="list-section-grid">
+
+      <!-- Just Finished -->
+      <div class="list-panel">
+        <div class="list-panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Just Finished
+        </div>
+        <a class="list-item" href="/watch/56839">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1142/126765l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">Frieren: Beyond Journey's End Season 2</div>
+            <div class="list-item-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><span>10 eps</span><span>·</span><span>⭐ 88</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/53998">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1171/109222l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">JUJUTSU KAISEN Season 3: The Culling Game Part 1</div>
+            <div class="list-item-meta"><span>TV</span><span>·</span><span>2026</span><span>·</span><span>12 eps</span><span>·</span><span>⭐ 86</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/55791">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1543/138166l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">Gachiakuta</div>
+            <div class="list-item-meta"><span>TV</span><span>·</span><span>2025</span><span>·</span><span>24 eps</span><span>·</span><span>⭐ 82</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/50417">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1695/138462l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">The Apothecary Diaries Season 2</div>
+            <div class="list-item-meta"><span>TV</span><span>·</span><span>2025</span><span>·</span><span>24 eps</span><span>·</span><span>⭐ 88</span></div>
+          </div>
+        </a>
+        <button class="show-more-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12"><polyline points="6 9 12 15 18 9"/></svg>
+          Show More
+        </button>
+      </div>
+
+      <!-- Top Movies -->
+      <div class="list-panel">
+        <div class="list-panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Top Movies
+        </div>
+        <a class="list-item" href="/watch/39680">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1180/121794l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">Gintama: THE VERY FINAL</div>
+            <div class="list-item-meta"><span>MOVIE</span><span>·</span><span>2021</span><span>·</span><span>⭐ 91</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/chainsaw-reze">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1079/136717l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">Chainsaw Man – The Movie: Reze Arc</div>
+            <div class="list-item-meta"><span>MOVIE</span><span>·</span><span>2025</span><span>·</span><span>⭐ 90</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/20954">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1033/138032l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">A Silent Voice</div>
+            <div class="list-item-meta"><span>MOVIE</span><span>·</span><span>2016</span><span>·</span><span>⭐ 88</span></div>
+          </div>
+        </a>
+        <a class="list-item" href="/watch/umamusume-movie">
+          <div class="list-item-thumb"><img src="https://cdn.myanimelist.net/images/anime/1018/138012l.jpg" alt="" loading="lazy"></div>
+          <div class="list-item-info">
+            <div class="list-item-title">Umamusume: Pretty Derby – Beginning of a New Era</div>
+            <div class="list-item-meta"><span>MOVIE</span><span>·</span><span>2024</span><span>·</span><span>⭐ 87</span></div>
+          </div>
+        </a>
+        <button class="show-more-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12"><polyline points="6 9 12 15 18 9"/></svg>
+          Show More
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ── Sidebar ─────────────────────────────────────────────── -->
+  <aside class="sidebar">
+
+    <!-- Top Airing -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">
+        Top Airing
+      </div>
+      <div class="airing-list">
+
+        <a class="airing-item" href="/watch/wistoria">
+          <span class="dot dot-airing" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1355/135759l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">Wistoria: Wand and Sword Season 2</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span><span>·</span><span>10/12</span></div>
+              <div class="airing-meta-row">⭐ 82</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="airing-item" href="/watch/49536">
+          <span class="dot dot-airing" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1337/99013l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">ONE PIECE</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>1999</span><span>·</span><span>1166</span></div>
+              <div class="airing-meta-row">⭐ 87</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="airing-item" href="/watch/daemons">
+          <span class="dot dot-airing" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1900/117467l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">Daemons of the Shadow Realm</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span><span>·</span><span>11/24</span></div>
+              <div class="airing-meta-row">⭐ 78</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="airing-item" href="/watch/nippon">
+          <span class="dot dot-airing" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1900/117467l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">NIPPON SANGOKU: The Three Nations</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>ONA</span><span>·</span><span>2026</span><span>·</span><span>11/12</span></div>
+              <div class="airing-meta-row">⭐ 82</div>
+            </div>
+          </div>
+        </a>
+
+        <a class="airing-item" href="/watch/182205">
+          <span class="dot dot-airing" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">That Time I Got Reincarnated as a Slime Season 4</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span><span>·</span><span>10</span></div>
+              <div class="airing-meta-row">⭐ 82</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Airing Schedule -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">
+        Estimated Airing Schedule
+      </div>
+
+      <div style="display:flex;gap:8px;margin-bottom:12px;">
+        <button class="genre-pill active" style="font-size:11px;padding:3px 10px">Sun<br><span style="font-size:9px;color:var(--text-muted)">Jun 14</span></button>
+        <button class="genre-pill" style="font-size:11px;padding:3px 10px">Mon</button>
+        <button class="genre-pill" style="font-size:11px;padding:3px 10px">Tue</button>
+        <button class="genre-pill" style="font-size:11px;padding:3px 10px">Wed</button>
+      </div>
+
+      <div class="schedule-list">
+        <a class="schedule-item" href="/watch/wistoria">
+          <span class="schedule-time">02:30</span>
+          <span class="schedule-title truncate">Wistoria: Wand and Sword S2</span>
+          <span class="schedule-ep">EP 10</span>
+        </a>
+        <a class="schedule-item" href="/watch/mission-yozakura">
+          <span class="schedule-time">03:00</span>
+          <span class="schedule-title truncate">Mission: Yozakura Family S2</span>
+          <span class="schedule-ep">EP 10</span>
+        </a>
+        <a class="schedule-item" href="/watch/ace-diamond">
+          <span class="schedule-time">03:30</span>
+          <span class="schedule-title truncate">Ace of the Diamond act II –S…</span>
+          <span class="schedule-ep">EP 11</span>
+        </a>
+        <a class="schedule-item" href="/watch/holo-graffiti">
+          <span class="schedule-time">04:00</span>
+          <span class="schedule-title truncate">Holo no Graffiti</span>
+          <span class="schedule-ep">EP 370</span>
+        </a>
+        <a class="schedule-item" href="/watch/sazae">
+          <span class="schedule-time">04:30</span>
+          <span class="schedule-title truncate">Sazae-san</span>
+          <span class="schedule-ep">EP 2836</span>
+        </a>
+        <a class="schedule-item" href="/watch/nippon">
+          <span class="schedule-time">07:00</span>
+          <span class="schedule-title truncate">NIPPON SANGOKU: The Nation…</span>
+          <span class="schedule-ep">EP 11</span>
+        </a>
+        <a class="schedule-item" href="/watch/miss-maid">
+          <span class="schedule-time">08:00</span>
+          <span class="schedule-title truncate">The Food Diary of Miss Maid</span>
+          <span class="schedule-ep">EP 12</span>
+        </a>
+        <a class="schedule-item" href="/watch/lulutto">
+          <span class="schedule-time">08:30</span>
+          <span class="schedule-title truncate">Magical Sisters LuluttoLilly</span>
+          <span class="schedule-ep">EP 11</span>
+        </a>
+        <a class="schedule-item" href="/watch/49536">
+          <span class="schedule-time">09:16</span>
+          <span class="schedule-title truncate">ONE PIECE</span>
+          <span class="schedule-ep">EP 1166</span>
+        </a>
+        <a class="schedule-item" href="/watch/black-cat-witch">
+          <span class="schedule-time">09:30</span>
+          <span class="schedule-title truncate">The Classroom of the Black Cat…</span>
+          <span class="schedule-ep">EP 10</span>
+        </a>
+      </div>
+      <a href="/schedule" class="show-more-btn" style="margin-top:8px">View Full Schedule</a>
+    </div>
+
+    <!-- Upcoming -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Upcoming</div>
+      <div class="airing-list">
+        <a class="airing-item" href="/watch/mushoku">
+          <span class="dot dot-upcoming" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1432/140033l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">Mushoku Tensei: Jobless Reincarnation Season 3</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span></div>
+            </div>
+          </div>
+        </a>
+        <a class="airing-item" href="/watch/saga-tanya">
+          <span class="dot dot-upcoming" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1771/137451l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">Saga of Tanya the Evil Season 2</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span></div>
+            </div>
+          </div>
+        </a>
+        <a class="airing-item" href="/watch/bleach-calamity">
+          <span class="dot dot-upcoming" style="flex-shrink:0"></span>
+          <div class="airing-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1336/135266l.jpg" alt="" loading="lazy">
+          </div>
+          <div class="airing-info">
+            <div class="airing-title">BLEACH: Thousand-Year Blood War — The Calamity</div>
+            <div class="airing-meta">
+              <div class="airing-meta-row"><span>TV</span><span>·</span><span>2026</span></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer>
+  <div class="footer">
+    <div class="footer-brand">
+      <div class="footer-brand-logo font-display">🌸 Ani<span>Blossom</span></div>
+      <p class="footer-desc">Free anime streaming. Sub & dub. HD quality. This site does not retain any files on its server — it links to media hosted by third-party services.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-links-group">
+        <div class="footer-links-title">Browse</div>
+        <a href="/new">New Releases</a>
+        <a href="/popular">Popular</a>
+        <a href="/top-rated">Top Rated</a>
+        <a href="/movies">Movies</a>
+        <a href="/schedule">Schedule</a>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-links-title">Genres</div>
+        <a href="/genre/action">Action</a>
+        <a href="/genre/romance">Romance</a>
+        <a href="/genre/fantasy">Fantasy</a>
+        <a href="/genre/psychological">Psychological</a>
+        <a href="/genre/slice-of-life">Slice of Life</a>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-links-title">Community</div>
+        <a href="/discord">Discord</a>
+        <a href="/reddit">Reddit</a>
+        <a href="/twitter">Twitter</a>
+        <a href="/donate">Donate ♥</a>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-links-title">Info</div>
+        <a href="/about">About</a>
+        <a href="/dmca">DMCA</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/status">Status</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">
+      © 2026 <a href="/">aniblossom.com</a> · Powered by AniList &amp; Jikan API
+    </div>
+    <div class="footer-socials">
+      <a href="/discord" class="social-btn" aria-label="Discord">D</a>
+      <a href="/reddit" class="social-btn" aria-label="Reddit">R</a>
+      <a href="/twitter" class="social-btn" aria-label="Twitter">𝕏</a>
+    </div>
+  </div>
+</footer>
+
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="js/main.js"></script>
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Page buttons
+  document.querySelectorAll('.page-btn:not([class*="svg"])').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

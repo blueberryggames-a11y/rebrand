@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watch That Time I Got Reincarnated as a Slime Season 4 — AniBlossom">
+  <title>That Time I Got Reincarnated as a Slime S4 EP 1 — AniBlossom</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff6e96'/><text x='16' y='22' text-anchor='middle' font-size='18'>🌸</text></svg>">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { background: var(--bg-base); }
+    .watch-page-wrap { display: flex; flex-direction: column; min-height: 100vh; }
+    .watch-layout { display: grid; grid-template-columns: 1fr 300px; min-height: calc(100vh - var(--nav-h)); }
+    .watch-player-col { border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+
+    /* Sidebar in watch mode */
+    .watch-right-sidebar {
+      display: flex; flex-direction: column;
+      height: calc(100vh - var(--nav-h));
+      position: sticky; top: var(--nav-h);
+      overflow-y: auto; scrollbar-width: thin;
+    }
+
+    .ep-grid-mode { display: grid; grid-template-columns: 1fr 1fr; }
+    .ep-grid-mode .ep-item { flex-direction: column; padding: 6px; }
+    .ep-grid-mode .ep-thumb { width: 100%; height: auto; padding-top: 56.25%; position: relative; margin-bottom: 6px; }
+    .ep-grid-mode .ep-thumb img { position: absolute; inset: 0; }
+    .ep-grid-mode .ep-desc { display: none; }
+
+    @media (max-width: 900px) {
+      .watch-layout { grid-template-columns: 1fr; }
+      .watch-right-sidebar {
+        height: auto; position: static;
+        max-height: 420px; border-top: 1px solid var(--border);
+      }
+      .watch-player-col { border-right: none; }
+    }
+    @media (max-width: 640px) {
+      .anime-detail-grid { grid-template-columns: 1fr; }
+      .seasons-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body class="watch-page" data-anime-id="182205" data-anime-title="That Time I Got Reincarnated as a Slime Season 4" data-anime-thumb="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" data-current-ep="1">
+
+<!-- ── Navbar ──────────────────────────────────────────────── -->
+<nav class="navbar">
+  <button class="nav-menu-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="/" class="navbar-logo font-display">
+    <div class="logo-icon">🌸</div>
+    Ani<span>Blossom</span>
+  </a>
+  <div class="nav-search">
+    <span class="search-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </span>
+    <input id="searchInput" type="search" placeholder="Search anime…" autocomplete="off">
+    <div class="search-kbd"><span class="kbd">⌘</span><span class="kbd">K</span></div>
+    <div class="search-dropdown" id="searchDropdown"></div>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-btn" id="randomBtn" title="Random" aria-label="Random anime">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+    </button>
+    <button class="nav-btn" title="Watchlist" aria-label="Watchlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <div class="nav-user-avatar">M</div>
+  </div>
+</nav>
+
+<!-- Bookmark Banner -->
+<div class="site-banner">
+  <span class="site-banner-icon">🔖</span>
+  Bookmark <a href="/">aniblossom.com</a> so you never lose us.
+  <button class="site-banner-close" aria-label="Close">×</button>
+</div>
+
+<!-- ── Watch Layout ─────────────────────────────────────────── -->
+<div class="watch-page-wrap">
+<div class="watch-layout">
+
+  <!-- ── Left: Player + Info ────────────────────────────────── -->
+  <div class="watch-player-col">
+
+    <!-- Video -->
+    <div class="video-player-wrap">
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span style="font-size:13px;color:var(--text-muted)">Select a server to watch</span>
+      </div>
+    </div>
+
+    <!-- Player Controls Bar -->
+    <div class="player-bar">
+      <div class="player-bar-left">
+
+        <!-- Autoplay -->
+        <button class="player-toggle" data-pref="autoplay">
+          <div class="toggle-switch"></div>
+          Autoplay
+        </button>
+
+        <!-- Auto Skip -->
+        <button class="player-toggle on" data-pref="autoskip">
+          <div class="toggle-switch"></div>
+          Auto Skip
+        </button>
+
+        <!-- Auto Next -->
+        <button class="player-toggle" data-pref="autonext">
+          <div class="toggle-switch"></div>
+          Auto Next
+        </button>
+
+        <!-- Shortcuts -->
+        <button class="player-toggle" data-pref="shortcuts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          Shortcuts
+        </button>
+
+        <!-- Lights Off -->
+        <button class="player-toggle" data-pref="lights">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          Lights Off
+        </button>
+      </div>
+      <div class="player-bar-right">
+
+        <!-- Audio: Sub / Dub -->
+        <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-muted)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          Audio
+        </div>
+        <div class="audio-toggle">
+          <button class="audio-btn active">Sub</button>
+          <button class="audio-btn">Dub</button>
+        </div>
+
+        <!-- Server select -->
+        <div class="server-select">
+          <span class="server-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            Server
+          </span>
+          <select id="serverSelect" class="server-dropdown">
+            <option>kiwi</option>
+            <option>vidplay</option>
+            <option>filemoon</option>
+            <option>streamtape</option>
+            <option>doodstream</option>
+          </select>
+        </div>
+
+        <!-- Plyr -->
+        <button class="player-toggle" data-pref="plyr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Plyr
+        </button>
+
+        <!-- Prev / Ep N / Next -->
+        <div style="display:flex;align-items:center;gap:6px;margin-left:8px;border-left:1px solid var(--border);padding-left:12px">
+          <button class="nav-btn" title="Previous episode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span style="font-size:12px;color:var(--text-muted);white-space:nowrap">Episode 2</span>
+          <button class="nav-btn" title="Next episode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Episode Info Below Player -->
+    <div class="watch-info">
+      <div class="watch-ep-title">1. New Days</div>
+      <div class="watch-ep-meta">
+        <span class="watch-ep-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Apr 02, 2026
+        </span>
+        <span class="watch-ep-meta-item">10 dub servers</span>
+        <span class="watch-ep-meta-item">8 sub servers</span>
+      </div>
+      <div class="watch-ep-actions">
+        <button class="watch-action-btn" data-action="report">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          Report
+        </button>
+        <button class="watch-action-btn" data-action="download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download
+        </button>
+        <button class="watch-action-btn" data-action="share">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share
+        </button>
+      </div>
+    </div>
+
+    <!-- Anime Detail Card -->
+    <div class="anime-detail-card">
+      <div class="anime-detail-poster">
+        <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="That Time I Got Reincarnated as a Slime Season 4">
+        <div class="anime-detail-poster-actions">
+          <a href="https://anilist.co" target="_blank" rel="noopener" class="poster-action-btn">AniList</a>
+          <a href="https://myanimelist.net" target="_blank" rel="noopener" class="poster-action-btn">MAL</a>
+        </div>
+      </div>
+      <div class="anime-detail-info">
+        <h1 class="anime-detail-title">That Time I Got Reincarnated as a Slime Season 4</h1>
+        <div class="anime-detail-subtitle">Tensei Shitara Slime Datta Ken 4th Season</div>
+        <div class="anime-detail-tags">
+          <span class="anime-tag">Action</span>
+          <span class="anime-tag">Adventure</span>
+          <span class="anime-tag">Comedy</span>
+          <span class="anime-tag">Fantasy</span>
+        </div>
+        <p class="anime-detail-desc">
+          The fourth season of Tensei Shitara Slime Datta Ken. Demon Lord Rimuru's dream of creating an alliance between humans and monsters takes a step closer to being realized. As Tempest continues to prosper, Granville Rozzo and his granddaughter, Maribel Rozzo, clash with Demon Lord Rimuru over their plan to protect mankind by ruling over them. Meanwhile, in El Dorado, Demon Lord Leon works toward goals of his own. The awakening of a new Hero draws near!
+        </p>
+        <div class="anime-detail-grid">
+          <div class="detail-row"><span class="detail-label">Format</span><span class="detail-value">TV</span></div>
+          <div class="detail-row"><span class="detail-label">Start Date</span><span class="detail-value">April 3, 2026</span></div>
+          <div class="detail-row"><span class="detail-label">Status</span><span class="detail-value"><span class="dot dot-airing" style="display:inline-block;margin-right:4px;vertical-align:middle"></span>Airing</span></div>
+          <div class="detail-row"><span class="detail-label">End Date</span><span class="detail-value">—</span></div>
+          <div class="detail-row"><span class="detail-label">Episodes</span><span class="detail-value">9</span></div>
+          <div class="detail-row"><span class="detail-label">Country</span><span class="detail-value">JP</span></div>
+          <div class="detail-row"><span class="detail-label">Rating</span><span class="detail-value">81 / 100</span></div>
+          <div class="detail-row"><span class="detail-label">Adult</span><span class="detail-value">No</span></div>
+          <div class="detail-row"><span class="detail-label">Duration</span><span class="detail-value">24 min</span></div>
+          <div class="detail-row"><span class="detail-label">Studios</span><span class="detail-value">8-bit</span></div>
+          <div class="detail-row"><span class="detail-label">Season</span><span class="detail-value">Spring</span></div>
+          <div class="detail-row"><span class="detail-label">Official Site</span><span class="detail-value"><a href="https://www.ten-sura.com" target="_blank" rel="noopener" style="color:var(--accent)">ten-sura.com</a></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="comments-section">
+      <div class="comments-header">
+        <div>
+          <span class="comments-title">The Anime Community</span>
+          <span class="comments-count">2,046 Comments</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="comments-tabs">
+            <button class="comment-tab active" data-tab="anime">Anime</button>
+            <button class="comment-tab" data-tab="ep">EP 1</button>
+          </div>
+          <div class="comments-sort">
+            Sort by
+            <select class="sort-select">
+              <option>Top</option>
+              <option>New</option>
+              <option>Old</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auth bar -->
+      <div class="comments-auth-bar">
+        <p>Log in to join the discussion</p>
+        <button class="auth-btn auth-btn-login">Log In</button>
+        <button class="auth-btn auth-btn-signup">Sign Up</button>
+      </div>
+
+      <!-- Comments -->
+      <div class="comment-item">
+        <div class="comment-avatar">M</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            <span class="comment-author">Maverick</span>
+            <span class="comment-time">2 months ago</span>
+          </div>
+          <div class="comment-text">Diablo calls destroying a nation a miscellaneous task ?? He'd rather serve tea to Rimuru than destroying an entire nation, W butler.</div>
+          <div class="comment-actions">
+            <button class="comment-action-btn" data-vote="up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              <span class="comment-likes">715</span>
+            </button>
+            <button class="comment-action-btn" data-vote="down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+              <span class="comment-likes">2</span>
+            </button>
+            <button class="comment-reply-link">Reply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment-item">
+        <div class="comment-avatar" style="background:linear-gradient(135deg,#4ade80,#06b6d4)">A</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            <span class="comment-author">AkitoSenpai</span>
+            <span class="comment-time">2 months ago</span>
+          </div>
+          <div class="comment-text">Season 4 already hitting different from episode 1. The animation quality is absolutely top tier. 8-bit went all out this time.</div>
+          <div class="comment-actions">
+            <button class="comment-action-btn" data-vote="up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              <span class="comment-likes">431</span>
+            </button>
+            <button class="comment-action-btn" data-vote="down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+              <span class="comment-likes">0</span>
+            </button>
+            <button class="comment-reply-link">Reply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment-item">
+        <div class="comment-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">S</div>
+        <div class="comment-body">
+          <div class="comment-header">
+            <span class="comment-author">SlimeEnthusiast99</span>
+            <span class="comment-time">1 month ago</span>
+          </div>
+          <div class="comment-text">The Council of the West arc is finally animated! I've been waiting for this since I read the LN. No spoilers but things are about to get insane.</div>
+          <div class="comment-actions">
+            <button class="comment-action-btn" data-vote="up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              <span class="comment-likes">289</span>
+            </button>
+            <button class="comment-action-btn" data-vote="down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"/><path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+              <span class="comment-likes">5</span>
+            </button>
+            <button class="comment-reply-link">Reply</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ── Right: Episode List + Seasons + Related ────────────── -->
+  <div class="watch-right-sidebar">
+
+    <!-- Episode Panel -->
+    <div style="flex-shrink:0">
+      <div class="episode-panel-header">
+        <select class="ep-range-select">
+          <option>1 - 10</option>
+          <option>11 - 20</option>
+        </select>
+        <div class="ep-search">
+          <span class="ep-search-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </span>
+          <input type="search" placeholder="Filter episodes…">
+        </div>
+        <div class="ep-view-btns">
+          <button class="ep-view-btn active" data-view="list" title="List view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </button>
+          <button class="ep-view-btn" data-view="grid" title="Grid view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="episode-list">
+
+        <div class="ep-item active">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 1</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">New Days</div>
+            <div class="ep-desc">Tempest is thriving after the success of its festival, but unexpected trouble has arisen with the new dungeon.</div>
+            <div class="ep-date">Apr 02, 2026</div>
+            <div class="ep-badges">
+              <span class="ep-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+                10
+              </span>
+              <span class="ep-badge">🎤 8</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="/watch/182205/2" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 2</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">The Dungeon Evolves</div>
+            <div class="ep-desc">Rimuru and his trusted companions discuss ideas for improving the dungeon.</div>
+            <div class="ep-date">Apr 09, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/3" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 3</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">The Avatar Team Is Formed</div>
+            <div class="ep-desc">Rimuru, Ramine, Veldora, and Milim work on perfecting their avatars before facing Team Green Fury.</div>
+            <div class="ep-date">Apr 16, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/4" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 4</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">Invitation</div>
+            <div class="ep-desc">The Council of the West deliberates on whether to grant membership to Tempest.</div>
+            <div class="ep-date">Apr 23, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/5" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 5</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">The First Step</div>
+            <div class="ep-desc">Rimuru attends the meeting that will determine Tempest's membership in the Council of the West.</div>
+            <div class="ep-date">May 07, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/6" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 6</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">The Council of the West</div>
+            <div class="ep-desc">A list of unreasonable demands from the Council makes Rimuru realize that a deeper plot is in motion.</div>
+            <div class="ep-date">May 14, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/7" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 7</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">The Mastermind's Identity</div>
+            <div class="ep-desc">Rimuru uncovers who is truly pulling the strings behind the Council's hostile actions.</div>
+            <div class="ep-date">May 21, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/8" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 8</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">Confrontation</div>
+            <div class="ep-desc">Tensions boil over as Rimuru faces the mastermind directly.</div>
+            <div class="ep-date">May 28, 2026</div>
+          </div>
+        </a>
+
+        <a href="/watch/182205/9" class="ep-item">
+          <div class="ep-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+            <span class="ep-num-badge">EP 9</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-title">A New Alliance</div>
+            <div class="ep-desc">Following the confrontation, a new path forward for Tempest begins to take shape.</div>
+            <div class="ep-date">Jun 04, 2026</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Next episode alert -->
+      <div class="ep-next-alert">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="ep-next-text">Episode 11 in <strong>4d 11h</strong> · Fri, Jun 19, 08:02</span>
+      </div>
+    </div>
+
+    <!-- Seasons -->
+    <div style="padding:16px;border-top:1px solid var(--border)">
+      <div class="sidebar-section-title" style="margin-bottom:10px">Seasons</div>
+      <div class="seasons-grid">
+        <a href="/watch/tensei-s1" class="season-btn">
+          <div class="season-btn-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1383/103816l.jpg" alt="" loading="lazy">
+          </div>
+          Season 1
+        </a>
+        <a href="/watch/tensei-s2" class="season-btn">
+          <div class="season-btn-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1017/130307l.jpg" alt="" loading="lazy">
+          </div>
+          Season 2
+        </a>
+        <a href="/watch/tensei-s3" class="season-btn">
+          <div class="season-btn-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+          </div>
+          Season 3
+        </a>
+        <button class="season-btn active">
+          <div class="season-btn-thumb">
+            <img src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg" alt="" loading="lazy">
+          </div>
+          Season 4
+        </button>
+        <a href="/watch/tensei-specials" class="season-btn" style="grid-column:1/-1">Specials</a>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div style="padding:16px;border-top:1px solid var(--border)">
+      <div class="sidebar-section-title" style="margin-bottom:10px">Related</div>
+      <a class="related-item" href="/watch/tensei-s3">
+        <span class="dot dot-finished"></span>
+        <div class="related-thumb">
+          <img src="https://cdn.myanimelist.net/images/anime/1017/130307l.jpg" alt="" loading="lazy">
+        </div>
+        <div>
+          <div class="related-title">That Time I Got Reincarnated as a Slime Season 3</div>
+          <div class="related-meta">TV · 24 eps · ⭐ 78</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Recommendations -->
+    <div style="padding:16px;border-top:1px solid var(--border)">
+      <div class="sidebar-section-title" style="margin-bottom:10px">Recommendations</div>
+      <a class="related-item" href="/watch/tsukimichi-s2">
+        <span class="dot dot-finished"></span>
+        <div class="related-thumb">
+          <img src="https://cdn.myanimelist.net/images/anime/1855/138060l.jpg" alt="" loading="lazy">
+        </div>
+        <div>
+          <div class="related-title">TSUKIMICHI -Moonlit Fantasy- Season 2</div>
+          <div class="related-meta">TV · 25 eps · ⭐ 78</div>
+        </div>
+      </a>
+      <a class="related-item" href="/watch/tensei-s1">
+        <span class="dot dot-finished"></span>
+        <div class="related-thumb">
+          <img src="https://cdn.myanimelist.net/images/anime/1383/103816l.jpg" alt="" loading="lazy">
+        </div>
+        <div>
+          <div class="related-title">That Time I Got Reincarnated as a Slime</div>
+          <div class="related-meta">TV · 24 eps · ⭐ 80</div>
+        </div>
+      </a>
+      <a class="related-item" href="/watch/mushoku">
+        <span class="dot dot-upcoming"></span>
+        <div class="related-thumb">
+          <img src="https://cdn.myanimelist.net/images/anime/1432/140033l.jpg" alt="" loading="lazy">
+        </div>
+        <div>
+          <div class="related-title">Mushoku Tensei: Jobless Reincarnation</div>
+          <div class="related-meta">TV · 23 eps · ⭐ 84</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</div><!-- end watch-layout -->
+</div><!-- end watch-page-wrap -->
+
+<div id="toastContainer" class="toast-container"></div>
+<script src="../js/main.js"></script>
+</body>
+</html>
